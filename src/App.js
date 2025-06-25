@@ -10,7 +10,7 @@ const rfs = THREE.MathUtils.randFloatSpread
 const sphereGeometry = new THREE.SphereGeometry(1, 32, 32)
 const baubleMaterial = new THREE.MeshStandardMaterial({ color: "white", roughness: 0, envMapIntensity: 1 })
 
-export const App = () => (
+const App = () => (
   <Canvas 
     shadows 
     gl={{ 
@@ -73,3 +73,5 @@ function Pointer() {
     </mesh>
   )
 }
+
+export default App

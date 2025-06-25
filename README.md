@@ -1,6 +1,6 @@
 # React Three Fiber Physics Demo
 
-A beautiful 3D physics simulation built with React Three Fiber, featuring interactive spheres that are attracted to a center point with mouse-controlled lighting and post-processing effects.
+A beautiful 3D physics simulation built with React Three Fiber and Next.js, featuring interactive spheres that are attracted to a center point with mouse-controlled lighting and post-processing effects.
 
 ## 🚀 Features
 
@@ -13,9 +13,11 @@ A beautiful 3D physics simulation built with React Three Fiber, featuring intera
   - HDR environment mapping
 - **Real-time Controls**: Adjustable outline thickness using Leva debug panel
 - **Performance Optimized**: Instanced meshes for efficient rendering
+- **Next.js Powered**: Server-side rendering, optimized builds, and modern development experience
 
 ## 🛠️ Technologies Used
 
+- **Next.js 14** - React framework with SSR and optimization
 - **React 18** - UI framework
 - **React Three Fiber** - React renderer for Three.js
 - **React Three Cannon** - Physics engine integration
@@ -28,8 +30,8 @@ A beautiful 3D physics simulation built with React Three Fiber, featuring intera
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
-cd web-back-end-1.0
+git clone https://github.com/tgc-in-the-sky/web1.0-back-end.git
+cd web1.0-back-end
 ```
 
 2. Install dependencies:
@@ -39,7 +41,7 @@ npm install
 
 3. Start the development server:
 ```bash
-npm start
+npm run dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -54,25 +56,29 @@ npm start
 ## 🏗️ Project Structure
 
 ```
-src/
-├── App.js              # Main 3D scene component
-├── ErrorBoundary.js    # Error handling component
-├── index.js           # Application entry point
-├── styles.css         # Global styles
-└── Outlines.tsx       # Outline effect component
-
-public/
-├── adamsbridge.hdr    # HDR environment map
-├── cross.jpg          # Texture for spheres
-└── index.html         # HTML template
+├── pages/                 # Next.js pages
+│   ├── _app.js           # App wrapper
+│   ├── _document.js      # Custom document
+│   └── index.js          # Home page
+├── src/
+│   ├── App.js            # Main 3D scene component
+│   ├── ErrorBoundary.js  # Error handling component
+│   └── styles.css        # Component styles
+├── styles/
+│   └── globals.css       # Global styles
+├── public/               # Static assets
+│   ├── adamsbridge.hdr   # HDR environment map
+│   └── cross.jpg         # Texture for spheres
+├── next.config.js        # Next.js configuration
+└── package.json          # Dependencies and scripts
 ```
 
 ## 🔧 Available Scripts
 
-- `npm start` - Runs the app in development mode
+- `npm run dev` - Runs the app in development mode
 - `npm run build` - Builds the app for production
-- `npm test` - Launches the test runner
-- `npm run eject` - Ejects from Create React App (one-way operation)
+- `npm start` - Starts the production server
+- `npm run lint` - Runs the linter
 
 ## 🎨 Customization
 
@@ -91,6 +97,20 @@ Modify the `Clump` component in `src/App.js`:
 - Add new 3D models using React Three Drei components
 - Implement keyboard controls
 - Add more interactive elements
+- Create new pages in the `pages/` directory
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to [Vercel](https://vercel.com)
+3. Deploy automatically
+
+### Other Platforms
+```bash
+npm run build
+npm start
+```
 
 ## 🐛 Troubleshooting
 
@@ -107,4 +127,5 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - Original inspiration: [Dribbble shot by BestServedBold](https://dribbble.com/shots/5708399-Christmas-Collisions)
 - Built with [React Three Fiber](https://github.com/pmndrs/react-three-fiber)
-- Physics powered by [React Three Cannon](https://github.com/pmndrs/react-three-cannon) 
+- Physics powered by [React Three Cannon](https://github.com/pmndrs/react-three-cannon)
+- Framework powered by [Next.js](https://nextjs.org/) 
