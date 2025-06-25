@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  basePath: '/3d',
   
   // Handle static assets
   webpack: (config) => {
