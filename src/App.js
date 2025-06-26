@@ -31,7 +31,7 @@ const App = () => (
         <Pointer />
         <Clump />
       </Physics>
-      <Environment files="/adamsbridge.hdr" />
+      <Environment files="/3d/adamsbridge.hdr" />
       <EffectComposer disableNormalPass multisampling={0}>
         <N8AO halfRes color="black" aoRadius={2} intensity={1} aoSamples={6} denoiseSamples={4} />
         <Bloom mipmapBlur levels={7} intensity={1} />
@@ -43,7 +43,7 @@ const App = () => (
 
 function Clump({ mat = new THREE.Matrix4(), vec = new THREE.Vector3(), ...props }) {
   const { outlines } = useControls({ outlines: { value: 0.0, step: 0.01, min: 0, max: 0.05 } })
-  const texture = useTexture("/cross.jpg")
+  const texture = useTexture("/3d/cross.jpg")
   const [ref, api] = useSphere(() => ({ args: [1], mass: 1, angularDamping: 0.1, linearDamping: 0.65, position: [rfs(20), rfs(20), rfs(20)] }))
   useFrame((state) => {
     for (let i = 0; i < 40; i++) {
