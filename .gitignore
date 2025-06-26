@@ -9,6 +9,7 @@ build/
 dist/
 .next/
 out/
+.open-next/
 
 # Environment variables
 .env
