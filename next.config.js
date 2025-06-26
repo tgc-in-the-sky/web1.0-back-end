@@ -18,11 +18,6 @@ const nextConfig = {
   images: {
     domains: [],
   },
-  
-  // Enable experimental features if needed
-  experimental: {
-    appDir: false,
-  },
 }
 
 module.exports = nextConfig 
